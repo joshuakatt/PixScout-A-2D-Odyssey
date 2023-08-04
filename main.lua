@@ -35,54 +35,9 @@ function love.textinput(t)
     end
 end
 
-<<<<<<< Updated upstream
-    if love.keyboard.isDown("right") then
-        player.x = player.x+player.speed
-        player.anim = player.animations.right
-        isMoving = true
-    end
-    if love.keyboard.isDown("left") then
-        player.x = player.x-player.speed
-        player.anim = player.animations.left
-        isMoving = true
-    end
-    if love.keyboard.isDown("down") then
-        player.y = player.y+player.speed
-        player.anim = player.animations.down
-        isMoving = true
-    end
-    if love.keyboard.isDown("up") then
-        player.y = player.y-player.speed
-        player.anim = player.animations.up
-        isMoving = true
-    end
-    if isMoving == false then
-        player.anim:gotoFrame(2)
-    end
-    player.anim:update(dt)
- 
-    cam:lookAt(player.x, player.y)
-    local w= love.graphics.getWidth()
-    local h= love.graphics.getHeight()
-    local mapW = gameMap.width * gameMap.tilewidth
-    local mapH = gameMap.height * gameMap.tileheight
-
-    if cam.x < w/2 then
-        cam.x = w/2
-    end
-    if cam.x > (mapW - w/2) then
-        cam.x = (mapW - w/2)
-    end
-    if cam.y > (mapH - h/2) then
-        cam.y = (mapH - h/2) -- This line was previously cam.x
-    end
-    if cam.y < h/2 then
-        cam.y = h/2
-=======
 function love.update(dt)
     if love.keyboard.isDown('return') and not isInGame then
         isInGame = true
->>>>>>> Stashed changes
     end
 
     if isInGame then
@@ -135,14 +90,15 @@ function love.update(dt)
     else
         menuBgAnim = (menuBgAnim + dt) % (2 * math.pi) -- simple sine wave animation
     end
-    function drawWave(offsetY, color, amplitude)
-        local w = love.graphics.getWidth()
-        local h = love.graphics.getHeight()
-        love.graphics.setColor(color)
-        for x = 0, w, 5 do
-            local y = offsetY + amplitude * math.sin((x + menuBgAnim * 100) / 100)
-            love.graphics.circle('fill', x, y, 3) -- draw a small circle at (x, y)
-        end
+end
+
+function drawWave(offsetY, color, amplitude)
+    local w = love.graphics.getWidth()
+    local h = love.graphics.getHeight()
+    love.graphics.setColor(color)
+    for x = 0, w, 5 do
+        local y = offsetY + amplitude * math.sin((x + menuBgAnim * 100) / 100)
+        love.graphics.circle('fill', x, y, 3) -- draw a small circle at (x, y)
     end
 end
 
@@ -152,11 +108,7 @@ function love.draw()
         gameMap:drawLayer(gameMap.layers["Tile Layer 1"])
         gameMap:drawLayer(gameMap.layers["Trees"])
         player.anim:draw(player.sprite_sheet, player.x, player.y, nil, 6, nil, 6, 9)
-<<<<<<< Updated upstream
-    cam:detach()   
- end
-=======
-        cam:detach()
+        cam:detach()   
     else
         love.graphics.setBackgroundColor(0.2, 0.2, 0.2) -- dark gray background
         local h = love.graphics.getHeight()
@@ -177,4 +129,3 @@ function love.draw()
         love.graphics.printf(playerName, 0, h / 2, love.graphics.getWidth(), "center")
     end
 end
->>>>>>> Stashed changes
