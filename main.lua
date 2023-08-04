@@ -64,7 +64,7 @@ end
         cam.x = (mapW - w/2)
     end
     if cam.y > (mapH - h/2) then
-        cam.x = (mapH - h/2)
+        cam.y = (mapH - h/2) -- This line was previously cam.x
     end
     if cam.y < h/2 then
         cam.y = h/2
