@@ -13,6 +13,10 @@ Built with LUA and LÖVE 2D.
 </p>
 
 <p align="center">
+  <img src="images/readme_img_2.png" alt="Screenshot 2" width="50%" height="50%">
+</p>
+
+<p align="center">
   <img src="images/readme_img_1.png" alt="Screenshot 2" width="50%" height="50%">
 </p>
 
