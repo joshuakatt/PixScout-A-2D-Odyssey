@@ -2,6 +2,9 @@
 My first project in LUA. Never knew any LUA before this so it's still a work in progress haha.
 
 A 2D game with animated sprites, follow-around camera, and in-game physics.
+Now implemented modular game loading to allow users to load different games from menu.
+
+Game1 has a simpler map, while Game2 has a larger and slightly more complex map.
 
 Built with LUA and LÖVE 2D.
 
@@ -30,10 +33,12 @@ Replace 'yourusername' and 'yourrepository' with your GitHub username and the re
 to the cloned repository's directory.
 
 ## Run the game:
-If you are on Windows, drag the whole game folder onto the love.exe file.
+If you are on Windows, drag the main game folder onto the love.exe file. or simply (Ctrl + L)
 For MacOS and Linux, use the terminal and type:
-love .
-in the directory of the game folder.
+main.lua
+in the directory of the game folder. or simply (Cmd + L)
+
+else 
 
 ## Enjoy playing the game!
 
