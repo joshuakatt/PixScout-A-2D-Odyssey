@@ -29,12 +29,12 @@ function menu.draw()
 
         -- Draw title
         love.graphics.setFont(titleFont)
-        love.graphics.printf("Choose a game to start", 0, h / 2 - 50, w, "center")
+        love.graphics.printf("Choose a game to start by selecting the digit on your keyboard", 0, h / 2 - 50, w, "center")
 
         -- Draw choices
         love.graphics.setFont(choiceFont)
-        love.graphics.printf("1. Game 1", 0, h / 2 - 10, w, "center")
-        love.graphics.printf("2. Game 2", 0, h / 2 + 10, w, "center")
+        love.graphics.printf("1. Game 1", 0, h / 2 + 30, w, "center")
+        love.graphics.printf("2. Game 2", 0, h / 2 + 50, w, "center")
     end
 end
 
@@ -46,6 +46,7 @@ function menu.keypressed(key)
             if currentGame.keypressed then -- check if the function exists
                 currentGame.keypressed(key)
             end
+        
         end
     else
         if key == '1' then
