@@ -47,6 +47,8 @@ Feel free to fork this project and enhance it in any way. Your contributions are
 
 ## Acknowledgements
 This project wouldn't have been possible without the learning resources and libraries from the community. Special thanks to the creators of the libraries used in this project.
+I used the STI library for tiled that can be found here: [STI](https://github.com/karai17/Simple-Tiled-Implementation/tree/master/sti)
+and the anim8 library for animations that can be found here: [anim8](https://github.com/kikito/anim8)
 
 ## License
 This project is licensed under the MIT License. Please refer to the LICENSE file for details.
