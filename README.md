@@ -30,7 +30,7 @@ Install LÖVE 2D. Make sure the version you install is compatible with the LUA v
 Installing and Running the Game
 
 ## Clone the repository:
-git clone https://github.com/yourusername/yourrepository.git
+git clone [https://github.com/joshuakatt/PixScout-A-2D-Odyssey.git](https://github.com/joshuakatt/PixScout-A-2D-Odyssey)
 Replace 'yourusername' and 'yourrepository' with your GitHub username and the repository's name respectively.
 
 ## Navigate 
